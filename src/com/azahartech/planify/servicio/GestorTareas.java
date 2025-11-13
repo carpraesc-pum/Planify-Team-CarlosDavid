@@ -38,4 +38,20 @@ public class GestorTareas {
         }
         System.out.println("------------------");
     }
+
+    public void marcarTareaComoCompletada(int id) {
+        for (Tarea tarea : listaDeTareas) {
+            if (tarea.getId() == id) {
+                if (tarea.isCompletada()) {
+                    System.out.println("-> La tarea #" + id + " ya estaba completada.");
+                } else {
+                    tarea.setCompletada(true);
+                    System.out.println("-> ¡Bien hecho! Tarea #" + id + " marcada como completada.");
+                }
+                return; // Salimos del método una vez encontrada la tarea
+            }
+        }
+        // Si el bucle termina, la tarea no fue encontrada
+        System.out.println("-> Error: No se encontró ninguna tarea con el ID " + id + ".");
+    }
 }
