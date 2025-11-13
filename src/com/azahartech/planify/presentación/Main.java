@@ -49,7 +49,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("-> Error: Debes introducir un número. Inténtalo de nuevo.");
-                scanner.next(); // Limpia el buffer del scanner para evitar un bucle infinito
+                //scanner.next(); // Limpia el buffer del scanner para evitar un bucle infinito
             }
         }
         scanner.close();
