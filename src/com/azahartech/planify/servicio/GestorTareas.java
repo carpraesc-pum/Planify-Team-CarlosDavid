@@ -24,4 +24,18 @@ public class GestorTareas {
         System.out.println("-> Tarea añadida con éxito.");
     }
 
+    /**
+     * Muestra todas las tareas pendientes y completadas en la consola.
+     */
+    public void listarTareas() {
+        if (listaDeTareas.isEmpty()) {
+            System.out.println("-> No tienes ninguna tarea pendiente. ¡Añade una!");
+            return;
+        }
+        System.out.println("\n--- TUS TAREAS ---");
+        for (Tarea tarea : listaDeTareas) {
+            System.out.println(tarea);
+        }
+        System.out.println("------------------");
+    }
 }
