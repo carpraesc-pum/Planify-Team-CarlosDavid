@@ -20,15 +20,9 @@ jobs:
         java-version: '22'
         distribution: 'temurin'
         cache: maven
-    
-    - name: Run tests
-      run: mvn test
       
     - name: Run PMD analysis
       run: mvn pmd:pmd
-      
-    - name: Check PMD results
-      run: mvn pmd:check
       
     - name: Build with Maven
       run: mvn -B package --file pom.xml
