@@ -1,15 +1,25 @@
 package com.azahartech.planify.modelo;
 
+import com.azahartech.planify.Categoría;
+import com.azahartech.planify.Prioridad;
+import com.azahartech.planify.Usuario;
+
 public class Tarea {
     private static int contadorIds = 1; // Variable estática para generar IDs únicos
     private int id;
     private String descripcion;
+    private Usuario user;
+    private Categoría category;
+    private Prioridad priority;
     private boolean completada;
 
-    public Tarea(String descripcion) {
+    public Tarea(int id, String descripcion, Usuario user, Categoría category, Prioridad priority) {
         this.id = contadorIds++;
         this.descripcion = descripcion;
         this.completada = false; // Por defecto, una nueva tarea no está completada
+        this.user = user;
+        this.category = category;
+        this.priority = priority;
     }
 
     public int getId() {
