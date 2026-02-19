@@ -1,4 +1,4 @@
-package com.azahartech.planify;
+package com.azahartech.planify.modelo;
 
 import java.util.Objects;
 

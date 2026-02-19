@@ -2,7 +2,7 @@ package com.azahartech.planify.servicio;
 
 import com.azahartech.planify.Categoría;
 import com.azahartech.planify.Prioridad;
-import com.azahartech.planify.Usuario;
+import com.azahartech.planify.modelo.Usuario;
 import com.azahartech.planify.modelo.Tarea;
 import java.util.ArrayList;
 import java.util.HashSet;
