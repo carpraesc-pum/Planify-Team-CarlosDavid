@@ -1,25 +1,38 @@
 package com.azahartech.planify.servicio;
 
+import com.azahartech.planify.Categoría;
+import com.azahartech.planify.Prioridad;
+import com.azahartech.planify.modelo.Usuario;
 import com.azahartech.planify.modelo.Tarea;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+//list de tareas H
+//set de usuarios H
+//Utilizando los genéricos
+//Método agregarUsuario para añadir un usuario
 
 public class GestorTareas {
     private List<Tarea> listaDeTareas;
+    private Set<Usuario> setDeUsuarios;
     public GestorTareas() {
         this.listaDeTareas = new ArrayList<>();
+        this.setDeUsuarios = new HashSet<>();
+    }
+
+    public void anadirUsuario(String name, String type) {
+        Usuario usuarioNuevo = new Usuario(name, type);
+        setDeUsuarios.add(usuarioNuevo);
+        System.out.println(". . . Usuario añadido con éxito . . . ");
     }
 
     /**
      * Añade una nueva tarea a la lista.
      * @param descripcion El texto de la nueva tarea.
      */
-    public void anadirTarea(String descripcion) {
-        if (descripcion == null || descripcion.trim().isEmpty()) {
-            System.out.println("-> Error: La descripción de la tarea no puede estar vacía.");
-            return;
-        }
-        Tarea nuevaTarea = new Tarea(descripcion);
+    public void anadirTarea(String descripcion, Usuario user, Categoría category, Prioridad priority, boolean completada) {
+        Tarea nuevaTarea = new Tarea(descripcion, user, category, priority, completada);
         listaDeTareas.add(nuevaTarea);
         System.out.println("-> Tarea añadida con éxito.");
     }

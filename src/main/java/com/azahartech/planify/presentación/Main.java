@@ -1,5 +1,8 @@
 package com.azahartech.planify.presentación;
 
+import com.azahartech.planify.Categoría;
+import com.azahartech.planify.Prioridad;
+import com.azahartech.planify.modelo.Usuario;
 import com.azahartech.planify.servicio.GestorTareas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -30,7 +33,9 @@ public class Main {
                     case 1:
                         System.out.print("Escribe la descripción de la nueva tarea: ");
                         String descripcion = scanner.nextLine();
-                        gestor.anadirTarea(descripcion);
+                        Usuario user = new Usuario("Pepito", "Manager");
+                        boolean completada = true;
+                        gestor.anadirTarea(descripcion, user, Categoría.BUG, Prioridad.ALTA, completada);
                         break;
                     case 2:
                         gestor.listarTareas();

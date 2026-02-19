@@ -1,4 +1,4 @@
-package com.azahartech.planify;
+package com.azahartech.planify.modelo;
 
 import java.util.Objects;
 
@@ -25,4 +25,8 @@ public class Usuario {
         return Objects.equals(name, usuario.name) && Objects.equals(type, usuario.type);
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Type: " + type;
+    }
 }
