@@ -7,6 +7,11 @@ public class Tarea {
     private static int contadorIds = 1; // Variable estática para generar IDs únicos
     private int id;
     private String descripcion;
+
+    public Usuario getUser() {
+        return user;
+    }
+
     private Usuario user;
     private Categoría category;
     private Prioridad priority;
