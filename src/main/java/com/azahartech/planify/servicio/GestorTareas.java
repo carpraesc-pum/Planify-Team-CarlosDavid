@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 //list de tareas H
 //set de usuarios H
 //Utilizando los genéricos
@@ -51,7 +52,16 @@ public class GestorTareas {
         }
         System.out.println("------------------");
     }
-
+    public List<Tarea> filtrarPorUsuario(Usuario usuario) {
+        return listaDeTareas.stream()
+                .filter(tarea -> tarea.getUser().equals(usuario))
+                .collect(Collectors.toList());
+    }
+    public List<Tarea> getTareasPendientes() {
+        return listaDeTareas.stream()
+                .filter(tarea -> !tarea.isCompletada())
+                .collect(Collectors.toList());
+    }
     public void marcarTareaComoCompletada(int id) {
         for (Tarea tarea : listaDeTareas) {
             if (tarea.getId() == id) {
