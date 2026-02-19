@@ -26,7 +26,7 @@ public class GestorTareas {
         setDeUsuarios.add(usuarioNuevo);
         System.out.println(". . . Usuario añadido con éxito . . . ");
     }
- 
+
     /**
      * Añade una nueva tarea a la lista.
      * @param descripcion El texto de la nueva tarea.
