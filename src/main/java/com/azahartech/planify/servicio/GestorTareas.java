@@ -31,8 +31,8 @@ public class GestorTareas {
      * Añade una nueva tarea a la lista.
      * @param descripcion El texto de la nueva tarea.
      */
-    public void anadirTarea(int id, String descripcion, Usuario user, Categoría category, Prioridad priority) {
-        Tarea nuevaTarea = new Tarea(id, descripcion, user, category, priority);
+    public void anadirTarea(String descripcion, Usuario user, Categoría category, Prioridad priority, boolean completada) {
+        Tarea nuevaTarea = new Tarea(descripcion, user, category, priority, completada);
         listaDeTareas.add(nuevaTarea);
         System.out.println("-> Tarea añadida con éxito.");
     }
