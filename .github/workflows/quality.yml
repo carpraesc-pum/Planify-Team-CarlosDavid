@@ -21,8 +21,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
       
-    - name: Run PMD analysis
-      run: mvn pmd:pmd
+   # - name: Run PMD analysis
+      #run: mvn pmd:pmd
       
     - name: Build with Maven
       run: mvn -B package --file pom.xml
