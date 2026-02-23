@@ -41,4 +41,16 @@ public class Tarea {
     public void setCompletada(boolean completada) {
         this.completada = completada;
     }
+
+    public Categoría getCategoria() {
+        return category;
+    }
+
+    public Prioridad getPrioridad() {
+        return priority;
+    }
+
+    public Usuario getUsuario() {
+        return user;
+    }
 }
