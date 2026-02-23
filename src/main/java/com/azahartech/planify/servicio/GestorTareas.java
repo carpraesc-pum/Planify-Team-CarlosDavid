@@ -22,6 +22,14 @@ public class GestorTareas {
         this.setDeUsuarios = new HashSet<>();
     }
 
+    public Set<Usuario> getSetDeUsuarios() {
+        return setDeUsuarios;
+    }
+
+    public List<Tarea> getListaDeTareas() {
+        return listaDeTareas;
+    }
+
     public void anadirUsuario(String name, String type) {
         Usuario usuarioNuevo = new Usuario(name, type);
         setDeUsuarios.add(usuarioNuevo);
