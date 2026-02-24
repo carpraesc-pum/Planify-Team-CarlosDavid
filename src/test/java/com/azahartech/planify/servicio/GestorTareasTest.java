@@ -46,15 +46,6 @@ public class GestorTareasTest {
         assertEquals(2, resultado.size());
     }
 
-
-import org.junit.jupiter.api.Test;
-
-import java.security.KeyStore;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-class GestorTareasTest {
-
     @org.junit.jupiter.api.Test
     void anadirUsuario() {
         GestorTareas user = new GestorTareas();
